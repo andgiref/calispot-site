@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karuanas</title>
+</head>
+<body>
+  <script>
+    // If the URL has an auth hash fragment (from Supabase email links),
+    // redirect to auth.html which handles token processing.
+    if (window.location.hash && window.location.hash.includes('token')) {
+      window.location.replace('/auth.html' + window.location.hash);
+    }
+  </script>
+</body>
+</html>
