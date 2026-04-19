@@ -16,11 +16,7 @@
       --white: #FFFFFF;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -32,8 +28,40 @@
 
     header {
       background: var(--green-700);
-      padding: 2.5rem 1.5rem 2rem;
+      padding: 1.25rem 1.5rem 2rem;
       text-align: center;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.9rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      margin-bottom: 1.5rem;
+    }
+
+    .topnav a,
+    .topnav span {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .topnav a:hover {
+      color: var(--white);
+      text-decoration: underline;
+    }
+
+    .topnav .current {
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .topnav .sep {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.7rem;
     }
 
     header h1 {
@@ -55,9 +83,7 @@
       padding: 2rem 1.5rem 4rem;
     }
 
-    section {
-      margin-bottom: 2rem;
-    }
+    section { margin-bottom: 2rem; }
 
     h2 {
       font-size: 1.1rem;
@@ -79,18 +105,14 @@
       margin: 0 0 0.75rem 1.5rem;
     }
 
-    ol li, ul li {
-      margin-bottom: 0.35rem;
-    }
+    ol li, ul li { margin-bottom: 0.35rem; }
 
-    a {
+    main a {
       color: var(--green-700);
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
+    main a:hover { text-decoration: underline; }
 
     footer {
       text-align: center;
@@ -106,26 +128,22 @@
     }
 
     @media (min-width: 768px) {
-      header {
-        padding: 3.5rem 2rem 2.5rem;
-      }
-
-      header h1 {
-        font-size: 2rem;
-      }
-
-      main {
-        padding: 3rem 2rem 5rem;
-      }
-
-      h2 {
-        font-size: 1.2rem;
-      }
+      header { padding: 1.5rem 2rem 2.5rem; }
+      header h1 { font-size: 2rem; }
+      main { padding: 3rem 2rem 5rem; }
+      h2 { font-size: 1.2rem; }
     }
   </style>
 </head>
 <body>
   <header>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <span class="sep">·</span>
+      <a href="privacy.html">Privacy</a>
+      <span class="sep">·</span>
+      <span class="current">Delete Account</span>
+    </div>
     <h1>Karuanas — Delete Your Account</h1>
     <p>Last updated: April 2026</p>
   </header>

@@ -12,6 +12,7 @@
       --green-50: #F0FDF4;
       --gray-900: #111827;
       --gray-500: #6B7280;
+      --gray-400: #9CA3AF;
       --white: #FFFFFF;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -68,6 +69,18 @@
       font-size: 0.8rem;
       color: var(--gray-500);
       margin-top: 1.5rem;
+      margin-bottom: 0;
+    }
+    .home-link {
+      display: inline-block;
+      margin-top: 2.5rem;
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      text-decoration: none;
+    }
+    .home-link:hover {
+      color: var(--green-700);
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -78,6 +91,7 @@
     <p>Your account is now active. Open Karuanas and log in to start exploring.</p>
     <a href="karuanas://" class="btn">Open Karuanas</a>
     <p class="hint">If the button doesn't work, open the app manually.</p>
+    <a href="index.html" class="home-link">← karuanas.eu</a>
   </div>
 </body>
 </html>
