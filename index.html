@@ -3,15 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karuanas</title>
+  <title>Karuanas — Find outdoor calisthenics spots</title>
+  <meta name="description" content="Karuanas helps you discover and share outdoor calisthenics and street workout spots. Free, no ads, community-driven.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green-700: #2D6A4F;
+      --green-600: #358760;
+      --green-50: #F0FDF4;
+      --gray-900: #111827;
+      --gray-600: #4B5563;
+      --gray-400: #9CA3AF;
+      --white: #FFFFFF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--gray-900);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      background: var(--green-700);
+      padding: 3rem 1.5rem 2.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      color: var(--white);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    header p.tagline {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1rem;
+      margin-top: 0.6rem;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-group {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--white);
+      color: var(--green-700);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-50);
+    }
+
+    .btn-secondary {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.85rem;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      padding-bottom: 1px;
+    }
+
+    .btn-secondary:hover {
+      color: var(--white);
+      border-bottom-color: var(--white);
+    }
+
+    main {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 3rem;
+    }
+
+    section {
+      margin-bottom: 2.25rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--green-700);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin-bottom: 0.75rem;
+    }
+
+    ul {
+      font-size: 0.95rem;
+      color: var(--gray-600);
+      margin: 0 0 0.75rem 1.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--green-50);
+      color: var(--green-700);
+      font-size: 0.8rem;
+      font-weight: 500;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      margin-right: 0.35rem;
+      margin-bottom: 0.35rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid #E5E7EB;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--gray-400);
+      margin-bottom: 0.5rem;
+    }
+
+    footer nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    footer nav a {
+      color: var(--green-700);
+      text-decoration: none;
+      font-size: 0.85rem;
+    }
+
+    footer nav a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      header {
+        padding: 4.5rem 2rem 3.5rem;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      header p.tagline {
+        font-size: 1.1rem;
+      }
+
+      main {
+        padding: 3.5rem 2rem 4rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <script>
-    // If the URL has an auth hash fragment (from Supabase email links),
-    // redirect to auth.html which handles token processing.
-    if (window.location.hash && window.location.hash.includes('token')) {
-      window.location.replace('/auth.html' + window.location.hash);
-    }
-  </script>
+  <header>
+    <h1>Karuanas</h1>
+    <p class="tagline">Discover and share outdoor calisthenics spots near you.</p>
+    <div class="cta-group">
+      <a class="btn-primary" href="#" aria-label="Get Karuanas on Google Play">Get it on Google Play</a>
+      <a class="btn-secondary" href="mailto:support@karuanas.eu">or contact support@karuanas.eu</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>What is Karuanas?</h2>
+      <p>Karuanas helps you find outdoor calisthenics and street workout spots wherever you are. Browse a community-driven map of parks, pull-up bars, rings, and workout stations — or add your own in seconds.</p>
+      <p>Found a great spot that's not on the map? Drop a pin, select the equipment, snap a photo, and share it with the community.</p>
+    </section>
+
+    <section>
+      <h2>Features</h2>
+      <ul>
+        <li>Interactive map with clustering and search</li>
+        <li>Filter spots by equipment: pull-up bars, parallel bars, rings, dip stations, and more</li>
+        <li>Community photos and reviews</li>
+        <li>Save your favorite spots for quick access</li>
+        <li>Free, no ads, no tracking</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <p>
+        <span class="badge">English</span>
+        <span class="badge">Italiano</span>
+        <span class="badge">Deutsch</span>
+        <span class="badge">Français</span>
+        <span class="badge">Español</span>
+        <span class="badge">Português</span>
+        <span class="badge">Nederlands</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Feedback</h2>
+      <p>Karuanas is built by a calisthenics enthusiast for the community. Got feedback, suggestions, or found a bug? Reach out at <a href="mailto:support@karuanas.eu" style="color: var(--green-700); text-decoration: none; border-bottom: 1px solid var(--green-700);">support@karuanas.eu</a>. As a personal project, responses may take a few days.</p>
+    </section>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="delete-account.html">Delete Account</a>
+      <a href="mailto:support@karuanas.eu">Contact</a>
+    </nav>
+    <p>Karuanas — a personal project</p>
+  </footer>
 </body>
 </html>
